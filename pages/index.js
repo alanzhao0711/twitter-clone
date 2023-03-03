@@ -23,7 +23,10 @@ export default function Home({ randomUsersResults }) {
 
         {/* Widgets */}
 
-        <Widgets randomUsersResults={randomUsersResults?.results || null} />
+        <Widgets
+          // newsResults={newsResults?.articles}
+          randomUsersResults={randomUsersResults?.results || null}
+        />
 
         {/* Modal */}
 
@@ -36,6 +39,10 @@ export default function Home({ randomUsersResults }) {
 // https://saurav.tech/NewsAPI/top-headlines/category/business/us.json
 
 export async function getServerSideProps() {
+  // const newsResults = await fetch(
+  //   "https://saurav.tech/NewsAPI/top-headlines/category/business/us.json"
+  // ).then((res) => res.json());
+
   // Who to follow section
 
   let randomUsersResults = [];
@@ -56,6 +63,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
+      newsResults,
       randomUsersResults,
     },
   };
