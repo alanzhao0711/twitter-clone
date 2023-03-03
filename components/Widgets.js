@@ -8,7 +8,7 @@ import { userState } from "../atom/userAtom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
-export default function Widgets({ newsResults, randomUsersResults }) {
+export default function Widgets({ randomUsersResults }) {
   const router = useRouter();
   const [randomUserNum, setRandomUserNum] = useState(3);
   const [currentUser, setCurrentUser] = useRecoilState(userState);
