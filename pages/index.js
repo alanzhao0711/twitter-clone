@@ -63,7 +63,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      newsResults,
+      // newsResults,
       randomUsersResults,
     },
   };
